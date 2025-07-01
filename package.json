@@ -1,6 +1,6 @@
 {
   "name": "@energyaspects/ea-capacitor-swipe-back-plugin",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Capacitor swipe back plugin. For Capacitor v3, v4 (0.0.3), v5 (1.0.0), v6 (2.0.0) and v7 (3.0.0). For v2 use original plugin: https://github.com/diiiary/capacitor-plugin-ios-swipe-back",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
@@ -63,7 +63,7 @@
     "typescript": "~4.1.5"
   },
   "peerDependencies": {
-    "@capacitor/core": "^6.0.0"
+    "@capacitor/core": "^7.0.0"
   },
   "prettier": "@ionic/prettier-config",
   "swiftlint": "@ionic/swiftlint-config",
