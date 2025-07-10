@@ -4,6 +4,49 @@ Capacitor swipe back plugin. For Capacitor v3, v4 (0.0.3), v5 (1.0.0), v6 (2.0.0
 
 ## Install
 
+### Swift Package Manager
+
+To add the plugin using Swift Package Manager, add the following line to your dependencies in `Package.swift`:
+
+```swift
+.package(url: "https://github.com/energyaspects/capacitor-plugin-swipe-back.git", from: "3.0.3")
+```
+
+Then add the package as a dependency:
+
+```swift
+CapacitorSwipeBackPlugin
+```
+
+**Note**: When using SPM, the Capacitor framework must be available in your app's dependencies. This plugin provides Swift source files that will be compiled alongside your Capacitor app.
+
+#### For iOS Apps with SPM
+
+1. Add the plugin to your `Package.swift`:
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/energyaspects/capacitor-plugin-swipe-back.git", from: "3.0.3")
+]
+```
+
+2. Add it to your target dependencies:
+
+```swift
+targets: [
+    .target(
+        name: "YourApp",
+        dependencies: [
+            "CapacitorSwipeBackPlugin"
+        ]
+    )
+]
+```
+
+3. The plugin will automatically be available when Capacitor is present in your app.
+
+### npm
+
 ```bash
 npm install ea-capacitor-swipe-back-plugin
 npx cap sync

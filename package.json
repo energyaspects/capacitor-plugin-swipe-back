@@ -1,7 +1,7 @@
 {
   "name": "@energyaspects/ea-capacitor-swipe-back-plugin",
-  "version": "3.0.2",
-  "description": "Capacitor swipe back plugin. For Capacitor v3, v4 (0.0.3), v5 (1.0.0), v6 (2.0.0) and v7 (3.0.0). For v2 use original plugin: https://github.com/diiiary/capacitor-plugin-ios-swipe-back",
+  "version": "3.0.3",
+  "description": "Capacitor swipe back plugin. For Capacitor v3, v4 (0.0.3), v5 (1.0.0), v6 (2.0.0) and v7 (3.0.0+). Supports CocoaPods & SPM (3.0.3+). For v2 use original plugin: https://github.com/diiiary/capacitor-plugin-ios-swipe-back",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
@@ -11,7 +11,10 @@
     "android/build.gradle",
     "dist/",
     "ios/Plugin/",
-    "CapacitorSwipeBackPlugin.podspec"
+    "CapacitorSwipeBackPlugin.podspec",
+    "Package.swift",
+    "Sources/",
+    "SPM_INTEGRATION.md"
   ],
   "author": "Ales Mraz",
   "license": "MIT",
@@ -31,8 +34,9 @@
     "registry": "https://npm.pkg.github.com"
   },
   "scripts": {
-    "verify": "npm run verify:ios && npm run verify:android && npm run verify:web",
+    "verify": "npm run verify:ios && npm run verify:spm && npm run verify:android && npm run verify:web",
     "verify:ios": "cd ios && pod install && xcodebuild -workspace Plugin.xcworkspace -scheme Plugin -destination generic/platform=iOS && cd ..",
+    "verify:spm": "swift build && swift package show-dependencies",
     "verify:android": "cd android && ./gradlew clean build test && cd ..",
     "verify:web": "npm run build",
     "lint": "npm run eslint && npm run prettier -- --check && npm run swiftlint -- lint",
@@ -77,5 +81,9 @@
     "android": {
       "src": "android"
     }
+  },
+  "swiftPackageManager": {
+    "packageName": "CapacitorSwipeBackPlugin",
+    "repositoryURL": "https://github.com/energyaspects/capacitor-plugin-swipe-back.git"
   }
 }
