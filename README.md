@@ -6,6 +6,7 @@ Capacitor swipe back plugin. For Capacitor v3, v4 (0.0.3), v5 (1.0.0), v6 (2.0.0
 
 ### 3.0.5
 - Added support for auto-registration with Swift Package Manager (SPM) via the CAPBridgedPlugin protocol
+- Updated package name in Package.swift to align with EnergyAspects naming conventions
 - Plugin can now be used without manual registration in PluginRegistration.swift when using SPM
 
 ## Install

@@ -2,13 +2,13 @@
 import PackageDescription
 
 let package = Package(
-    name: "CapacitorSwipeBackPlugin",
+    name: "EnergyaspectsEaCapacitorSwipeBackPlugin",
     platforms: [
         .iOS(.v14)
     ],
     products: [
         .library(
-            name: "CapacitorSwipeBackPlugin",
+            name: "EnergyaspectsEaCapacitorSwipeBackPlugin",
             targets: ["CapacitorSwipeBackPlugin"]
         )
     ],
