@@ -4,7 +4,14 @@ import Foundation
 import Capacitor
 
 @objc(CapacitorSwipeBackPlugin)
-public class CapacitorSwipeBackPlugin: CAPPlugin {
+public class CapacitorSwipeBackPlugin: CAPPlugin, CAPBridgedPlugin {
+    public let identifier = "CapacitorSwipeBackPlugin"
+    public let jsName = "CapacitorSwipeBack"
+    public let pluginMethods: [CAPPluginMethod] = [
+        CAPPluginMethod(name: "enable", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "disable", returnType: CAPPluginReturnPromise)
+    ]
+    
     @objc func enable(_ call: CAPPluginCall) {
         webView?.allowsBackForwardNavigationGestures = true
         call.resolve([

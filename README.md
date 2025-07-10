@@ -2,6 +2,12 @@
 
 Capacitor swipe back plugin. For Capacitor v3, v4 (0.0.3), v5 (1.0.0), v6 (2.0.0) and v7 (3.0.0). For v2 use original plugin: https://github.com/diiiary/capacitor-plugin-ios-swipe-back
 
+## Changelog
+
+### 3.0.5
+- Added support for auto-registration with Swift Package Manager (SPM) via the CAPBridgedPlugin protocol
+- Plugin can now be used without manual registration in PluginRegistration.swift when using SPM
+
 ## Install
 
 ### Swift Package Manager
