@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "CapacitorSwipeBackPlugin",
     platforms: [
-        .iOS(.v13)
+        .iOS(.v14)
     ],
     products: [
         .library(
@@ -13,13 +13,14 @@ let package = Package(
         )
     ],
     dependencies: [
-        // Note: Capacitor framework must be added as a dependency in the consuming app
-        // This package provides the source code that can be compiled alongside Capacitor
+        .package(url: "https://github.com/ionic-team/capacitor-swift-pm.git", exact: "7.0.0")
     ],
     targets: [
         .target(
             name: "CapacitorSwipeBackPlugin",
-            dependencies: [],
+            dependencies: [
+                .product(name: "Capacitor", package: "capacitor-swift-pm")
+            ],
             path: "Sources/CapacitorSwipeBackPlugin",
             linkerSettings: [
                 .linkedFramework("UIKit"),
