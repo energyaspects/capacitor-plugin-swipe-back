@@ -6,7 +6,7 @@ import Capacitor
 @objc(CapacitorSwipeBackPlugin)
 public class CapacitorSwipeBackPlugin: CAPPlugin, CAPBridgedPlugin {
     public let identifier = "CapacitorSwipeBackPlugin"
-    public let jsName = "CapacitorSwipeBack"
+    public let jsName = "CapacitorSwipeBackPlugin"
     public let pluginMethods: [CAPPluginMethod] = [
         CAPPluginMethod(name: "enable", returnType: CAPPluginReturnPromise),
         CAPPluginMethod(name: "disable", returnType: CAPPluginReturnPromise)
