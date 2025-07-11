@@ -7,11 +7,7 @@ import Capacitor
 @objc(CapacitorSwipeBackPluginBridge)
 public class CapacitorSwipeBackPluginBridge: NSObject {
     
-    @objc public static func registerPlugin() {
-        // Register the plugin with Capacitor
-        // This provides the same functionality as the Objective-C CAP_PLUGIN macro
-        CapacitorPlugin.register(CapacitorSwipeBackPlugin.self, as: "CapacitorSwipeBackPlugin")
-    }
+    // Registration is now automatic via CAPBridgedPlugin; no manual registration needed.
     
     @objc public static func getMethods() -> [String: Any] {
         return [
