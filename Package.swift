@@ -1,10 +1,10 @@
-// swift-tools-version:5.1
+// swift-tools-version:5.3
 import PackageDescription
 
 let package = Package(
     name: "EnergyaspectsEaCapacitorSwipeBackPlugin",
     platforms: [
-        .iOS(.v14)
+        .iOS("14.0")
     ],
     products: [
         .library(
@@ -13,7 +13,7 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/ionic-team/capacitor-swift-pm.git", exact: "7.0.0")
+        .package(url: "https://github.com/ionic-team/capacitor-swift-pm.git", .exact("7.0.0"))
     ],
     targets: [
         .target(
