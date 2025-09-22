@@ -1,6 +1,6 @@
 {
   "name": "@energyaspects/ea-capacitor-swipe-back-plugin",
-  "version": "3.0.9",
+  "version": "3.0.10",
   "description": "Capacitor swipe back plugin. For Capacitor v3, v4 (0.0.3), v5 (1.0.0), v6 (2.0.0) and v7 (3.0.0+). Supports CocoaPods & SPM (3.0.3+). For v2 use original plugin: https://github.com/diiiary/capacitor-plugin-ios-swipe-back",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
@@ -35,7 +35,7 @@
   },
   "scripts": {
     "verify": "npm run verify:ios && npm run verify:spm && npm run verify:android && npm run verify:web",
-    "verify:ios": "cd ios && pod install && xcodebuild -workspace Plugin.xcworkspace -scheme Plugin -destination generic/platform=iOS && cd ..",
+    "verify:ios": "cd ios && pod install && xcodebuild -workspace Plugin.xcworkspace -scheme Plugin -destination generic/platform=iOS ENABLE_USER_SCRIPT_SANDBOXING=YES SWIFT_VERSION=5.0 IPHONEOS_DEPLOYMENT_TARGET=14.0 ENABLE_MODULES=YES CLANG_ENABLE_MODULES=YES ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES=YES && cd ..",
     "verify:spm": "swift build && swift package show-dependencies",
     "verify:android": "cd android && ./gradlew clean build test && cd ..",
     "verify:web": "npm run build",
